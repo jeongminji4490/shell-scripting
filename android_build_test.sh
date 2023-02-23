@@ -4,13 +4,10 @@ ACCESS_TOKEN="YOUR ACCESS TOKEN"
 OWNER="YOUR ID"
 REPO="YOUR REPOSITORY NAME"
 
-BUILD_DIR=".../app"
-
-cd BUILD_DIR
+cd ".../app"
 
 VERSION=`grep -m1 "versionName" app/build.gradle | awk '{print $2}' | tr -d \''"\'`
-VERSION_NAME=${VERSION}
-echo $VERSION_NAME
+echo $VERSION
 
 CURRENT_COMMIT=$(git rev-parse HEAD)
 LAST_COMMIT=$(git rev-parse $CURRENT_COMMIT^)
@@ -33,7 +30,7 @@ curl \
   -H "Authorization: Bearer $ACCESS_TOKEN"\
   -H "X-GitHub-Api-Version: 2022-11-28" \
   "https://api.github.com/repos/$OWNER/$REPO/releases" \
-  -d '{"tag_name":"$VERSION_NAME","target_commitish":"master","name":"$VERSION_NAME","body":"$FULL_CHANGE_LOG","draft":false,"prerelease":false,"generate_release_notes":true}'
+  -d '{"tag_name":"$VERSION","target_commitish":"master","name":"$VERSION","body":"$FULL_CHANGE_LOG","draft":false,"prerelease":false,"generate_release_notes":true}'
 
 # Get Release ID for uploading APK
 RELEASE_ID=$(jq '.id' response.json)
