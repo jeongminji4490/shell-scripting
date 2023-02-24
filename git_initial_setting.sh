@@ -23,7 +23,7 @@ echo "if you want to add specific files, enter '2'"
 printf "Enter: "
 read ADD_TYPE
 
-if [ $(value) -eq 1 ];then
+if [ $(ADD_TYPE) -eq 1 ];then
   git add .
 else 
   git status
