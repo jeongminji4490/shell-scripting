@@ -25,7 +25,8 @@ function processingImage {
   echo "Convert Image Format : 1"
   echo "Resize Image : 2"
   echo "Rotate Image : 3"
-  echo "Quit the program : 4"
+  echo "Apply Effect to Image : 4"
+  echo "Quit the program : 5"
   echo ""
   read -p "${TEXT_BOLD}Enter what you'd like to do: ${TEXT_NORMAL}" INPUT
 
@@ -47,6 +48,10 @@ function processingImage {
       convert $IMAGE_FILE -rotate $DEGREES $IMAGE_FILE
       ;;
     4)
+      read -p "Enter effects(charcoal or implode)" EFFECT
+      convert $IMAGE_FILE -$EFFECT 1 $IMAGE_FILE
+      ;;
+    5)
       echo "Bye"
       exit 1
       ;;
