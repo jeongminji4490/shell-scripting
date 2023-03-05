@@ -31,4 +31,6 @@
 + [process_images.sh](https://github.com/jeongminji4490/shell-scripting/blob/main/process_images.sh) is for simple image-related tasks such as converting the image format, resizing and rotating the image, and applying effects to the image.
 + this project uses [ImageMagick](https://imagemagick.org/script/download.php)
 
-
+#### 7. Try to handle the database on Linux-based OS
++ [mysql.sh](https://github.com/jeongminji4490/shell-scripting/blob/main/mysql.sh) is for trying to handle MySQL database on Linux-based OS.
++ Running database server on Linux has benefits in terms of flexibility, performance, and security. 
