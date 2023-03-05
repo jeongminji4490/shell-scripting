@@ -1,6 +1,6 @@
 ![제목을-입력해주세요_](https://user-images.githubusercontent.com/62979330/221403813-b74424fd-360d-4b69-a154-5a5118e5835e.gif)
 
-### *This project consists of 7 simple shell script programs*
+### *This project consists of 8 simple shell script programs*
 
 + Shell scripting is required for skills such as task automation.
 + With this project, Not only can we write simple program, but we also gain ability to solve problems on Linux-based OS through shell scripting.
@@ -34,3 +34,7 @@
 #### 7. Try to handle the database on Linux-based OS
 + [mysql.sh](https://github.com/jeongminji4490/shell-scripting/blob/main/mysql.sh) is for trying to handle MySQL database on Linux-based OS.
 + Running database server on Linux has benefits in terms of flexibility, performance, and security. 
+
+#### 8. Timer
++ [timer.sh](https://github.com/jeongminji4490/shell-scripting/blob/main/timer.sh) is for setting timer.
++ 'sleep' & 'wait' command are used.
